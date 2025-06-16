@@ -1,17 +1,20 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title>Sobre o Autor</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Samuel Silva</ion-card-title>
+      <ion-card-subtitle>Engenharia de Software – UNINASSAU</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Matrícula:</strong> 12345678</p>
+      <p><strong>Disciplina:</strong> Desenvolvimento de Aplicativos Móveis</p>
+      <p><strong>Descrição:</strong> Aplicativo Ionic que consome Fake Store API para listar produtos e exibir detalhes.</p>
+      <p><strong>Contato:</strong> seu.email@dominio.com</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
