@@ -1,0 +1,61 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Capacitor
+android/
+ios/
+capacitor.config.json
+capacitor.config.ts
+
+# Cordova
+platforms/
+plugins/
+
+# Ionic build
+www/
+build/
+
+# Environment files
+.env
+.env.*
+
+# VSCode files
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Others
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Output of 'npm pack'
+*.tgz
+
+# Compiled source #
+dist/
+tmp/
+temp/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# JetBrains IDEs
+.idea/
+
+# Optional npm cache directory
+.npm/
+
+# System Files
+Thumbs.db
+Desktop.ini

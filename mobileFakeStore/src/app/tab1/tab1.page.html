@@ -1,17 +1,31 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title>Produtos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="loadProducts($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div *ngIf="isLoading" class="loading-container">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+  <div *ngIf="!isLoading && errorMsg" class="error-container">
+    <p>{{ errorMsg }}</p>
+    <ion-button (click)="loadProducts()">Tentar Novamente</ion-button>
+  </div>
+
+  <ion-list *ngIf="!isLoading && !errorMsg">
+    <ion-item *ngFor="let p of products" [routerLink]="['/tabs/tab2', p.id]">
+      <ion-thumbnail slot="start">
+        <img [src]="p.image" alt="{{ p.title }}" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ p.title }}</h2>
+        <p>{{ p.price | currency:'BRL':'symbol':'1.2-2' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

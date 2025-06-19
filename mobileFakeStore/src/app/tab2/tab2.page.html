@@ -1,17 +1,36 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content>
+  <div *ngIf="isLoading" class="loading-container">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+  <ng-container *ngIf="!isLoading">
+    <ng-container *ngIf="product; else erroTpl">
+      <ion-card>
+        <img [src]="product.image" alt="{{ product.title }}" />
+        <ion-card-header>
+          <ion-card-title>{{ product.title }}</ion-card-title>
+          <ion-card-subtitle>{{ product.category }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ product.description }}</p>
+          <p><strong>Preço: </strong>{{ product.price | currency:'BRL':'symbol':'1.2-2' }}</p>
+          <p *ngIf="product.rating"><strong>Avaliação: </strong>{{ product.rating.rate }} ({{ product.rating.count }} avaliações)</p>
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+    <ng-template #erroTpl>
+      <div class="error-container">
+        <p>{{ errorMsg }}</p>
+        <ion-button (click)="loadDetails()">Tentar Novamente</ion-button>
+      </div>
+    </ng-template>
+  </ng-container>
 </ion-content>
