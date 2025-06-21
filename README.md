@@ -1,17 +1,17 @@
-# 📱Aplicativo Móvel Ionic + Angular | MobileFakeStore
+# 📱Aplicativo E-commerce Ionic + Angular | MobileFakeStore
 
-Aplicativo móvel desenvolvido com **Ionic** e **Angular**, consumindo dados da [Fake Store API](https://fakestoreapi.com).
+Aplicativo móvel desenvolvido com *Ionic* e *Angular*, consumindo dados da [Fake Store API](https://fakestoreapi.com).
 O app simula uma loja virtual, exibindo produtos, seus detalhes e informações do autor do projeto.
 
 ---
 
 ## 🧾 Descrição do projeto
 
-Este projeto foi desenvolvido como parte de uma avaliação acadêmica com foco em desenvolvimento mobile. A aplicação utiliza o template `tabs` do Ionic e consome dados da Fake Store API, apresentando uma interface intuitiva com três seções principais:
+Este projeto foi desenvolvido como parte de uma avaliação acadêmica com foco em desenvolvimento mobile. A aplicação utiliza o template tabs do Ionic e consome dados da Fake Store API, apresentando uma interface intuitiva com três seções principais:
 
-- **Tab1 (Produtos):** Listagem produtos disponíveis na loja contendo nome, imagem e preço.
-- **Tab2 (Detalhes):** Exibe informações detalhadas de um produto selecionado pelo usuário.
-- **Tab3 (Sobre):** Apresenta dados do(a) autor(a) do projeto.
+- *Tab1 (Produtos):* Listagem produtos disponíveis na loja contendo nome, imagem e preço.
+- *Tab2 (Detalhes):* Exibe informações detalhadas de um produto selecionado pelo usuário.
+- *Tab3 (Sobre):* Apresenta dados do(a) autor(a) do projeto.
 
 ---
 
@@ -31,11 +31,12 @@ Antes de iniciar o projeto, certifique-se de ter instalado:
 
 ## 📥 Como baixar
 
-```bash
+bash
 # Clone este repositório
 git clone https://github.com/seu-usuario/mobileFakeStore.git
 
 # Acesse o diretório do projeto
+cd mobileFakeStore-main
 cd mobileFakeStore
 
 # Instale as dependências
@@ -45,7 +46,7 @@ npm install
 ionic serve
 
 # Para testar no emulador ou dispositivo:
-🚧1️⃣ (para primeira configuração da plataforma):
+🚧⿡ (para primeira configuração da plataforma):
 
 ionic build
 npx cap add android (ou ios)
@@ -53,12 +54,12 @@ npx cap copy
 npx cap open android (abrir no Android Studio)
 # (Configurar SDK/emulador conforme documentação Capacitor)
 
-✅2️⃣ (para projetos já configurados):
+✅⿢ (para projetos já configurados):
 
 ionic build
 npx cap sync
 npx cap open android # ou ios
-```
+
 ---
 ## 🤝 Contribuindo com o projeto
 Projeto desenvolvido individualmente como atividade avaliativa. No entanto, sugestões ou estudos colaborativos são bem-vindos!
@@ -76,7 +77,7 @@ Projeto desenvolvido individualmente como atividade avaliativa. No entanto, suge
 
 | Nome              | Curso                                    | Contato                                                  |
 | ----------------- | ---------------------------------------- | -------------------------------------------------------- |
-| Samuel Alexandre Barbosa da Silva | Análise e Desenvolvimento de Sistemas - Uninassau🧠 | \ samuel.abarbosas@gmail.com |
+| Ana Beatriz Alves de O. Santos | Análise e Desenvolvimento de Sistemas - Uninassau🧠 | \[[anabeatrizbl - Linkedin](https://www.linkedin.com/in/anabeatrizbl/)] |
 
 ---
 
@@ -86,5 +87,5 @@ Consulte o arquivo LICENSE para maiores detalhes.
 
 ---
 
-## 🖼️ Imagens do Projeto - GIF
-As 5 imagens mínimas solicitadas no projeto foram direcionadas a um GIF interativo acima do texto como forma de apresentação prévia ao interessado.
+## 🖼 Imagens do E-commerce - GIF
+![GIF - E-commerce](https://github.com/user-attachments/assets/5aa620aa-7430-4c83-8da3-a436163431af)
